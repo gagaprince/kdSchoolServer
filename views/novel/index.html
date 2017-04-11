@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="content-security-policy" content="script-src 'self'">
+    <link type="text/css" rel="stylesheet" href="/novel/css/index.css">
+    <script src="/lib/zepto.min.js"></script>
+    <!--<script src="../../src/js/novelindex.js"></script>-->
+</head>
+<body>
+<img id="wxicon" src="http://img1.qunarzz.com/car/1703/de/16e58fa29d58a202.jpg" alt=""/>
+<div class="header h-c">
+    <div class="backFrame" onclick="">
+        <div class="back">
+            <div class="bg-frame"></div>
+            <div class="front-frame"></div>
+        </div>
+    </div>
+    <div class="title">书库</div>
+    <div class="head-right"><img src="http://res.yicha.cn/static/tp/images/ssicon.png" alt=""/></div>
+</div>
+<div class="container v-c">
+    <div class="search-frame h-c">
+        <div class="input-frame h-c">
+            <input id="keyInput" type="text" placeholder="请输入书名或作者"/>
+        </div>
+        <div class="search-btn h-c" id="searchBtn" onclick="">搜索</div>
+    </div>
+    <div class="img-swipe-frame">
+        <div class="img-frame">
+            <img src="http://img1.qunarzz.com/car/1703/e0/70fc828c7cae5302.jpg" alt=""/>
+        </div>
+    </div>
+    <div class="cate-frame v-c">
+        <div class="cate-frame-l h-l">
+            <div class="cate-item h-c">
+                <div class="cate h-c blue" onclick="">玄幻</div>
+            </div>
+            <div class="cate-item h-c">
+                <div class="cate h-c pink" onclick="">都市</div>
+            </div>
+            <div class="cate-item h-c">
+                <div class="cate h-c green" onclick="">修真</div>
+            </div>
+        </div>
+        <div class="cate-frame-l h-l">
+            <div class="cate-item h-c">
+                <div class="cate h-c green" onclick="">科幻</div>
+            </div>
+            <div class="cate-item h-c">
+                <div class="cate h-c blue" onclick="">网游</div>
+            </div>
+            <div class="cate-item h-c">
+                <div class="cate h-c pink" onclick="">穿越</div>
+            </div>
+        </div>
+    </div>
+    <!--<div id="recommendFrame" class="recommend-frame v-c">
+        <div class="tj-frame">
+            <div class="tj-frame-title h-l">
+                推荐
+            </div>
+            <div class="tj-frame-content v-c">
+                <div class="tj-frame-l h-u">
+                    <div class="tj-frame-item h-c linkbook" novelid="145" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/0/330/330s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    大主宰
+                                </div>
+                                <div class="author h-c">
+                                    天蚕土豆
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="147" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/0/317/317s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    完美世界
+                                </div>
+                                <div class="author h-c">
+                                    辰东
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="178" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/1/1227/1227s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    武动乾坤
+                                </div>
+                                <div class="author h-c">
+                                    天蚕土豆
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="202" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/1/1257/1257s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    斗破苍穹
+                                </div>
+                                <div class="author h-c">
+                                    天蚕土豆
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tj-frame">
+            <div class="tj-frame-title h-l">
+                男生
+            </div>
+            <div class="tj-frame-content v-c">
+                <div class="tj-frame-l h-u">
+                    <div class="tj-frame-item h-c linkbook" novelid="991" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/5/5751/5751s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    冲天斗神
+                                </div>
+                                <div class="author h-c">
+                                    黑天魔神
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="4464" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/4/4832/4832s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    升斗小民
+                                </div>
+                                <div class="author h-c">
+                                    如莲如玉
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="202" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/1/1257/1257s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    斗破苍穹
+                                </div>
+                                <div class="author h-c">
+                                    天蚕土豆
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="2027" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/6/6383/6383s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    斗转九重天
+                                </div>
+                                <div class="author h-c">
+                                    牛云
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tj-frame-l h-u">
+                    <div class="tj-frame-item h-c linkbook" novelid="650" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/5/5885/5885s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    斗天狂徒
+                                </div>
+                                <div class="author h-c">
+                                    疯儿
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="4560" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/1/1607/1607s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    超级格斗幽灵
+                                </div>
+                                <div class="author h-c">
+                                    耗子欺负猫
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="1072" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/4/4815/4815s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    能斗
+                                </div>
+                                <div class="author h-c">
+                                    吒祖
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="6173" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/3/3561/3561s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    斗神武装
+                                </div>
+                                <div class="author h-c">
+                                    夜咏星
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tj-frame">
+            <div class="tj-frame-title h-l">
+                女生
+            </div>
+            <div class="tj-frame-content v-c">
+                <div class="tj-frame-l h-u">
+                    <div class="tj-frame-item h-c linkbook" novelid="2160" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/0/138/138s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    极品狂少
+                                </div>
+                                <div class="author h-c">
+                                    我本疯狂
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="4220" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/4/4825/4825s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    极品弃才
+                                </div>
+                                <div class="author h-c">
+                                    倚岸观明月
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="2234" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/0/701/701s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    极品老婆
+                                </div>
+                                <div class="author h-c">
+                                    李兴禹
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="1374" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/0/755/755s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    极品雷帝
+                                </div>
+                                <div class="author h-c">
+                                    爱得欲罢不能
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tj-frame-l h-u">
+                    <div class="tj-frame-item h-c linkbook" novelid="4189" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/4/4545/4545s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    极品兵王在都市
+                                </div>
+                                <div class="author h-c">
+                                    浮屠剑圣
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="2347" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/0/126/126s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    极品鉴宝师
+                                </div>
+                                <div class="author h-c">
+                                    古栋
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="4431" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/3/3813/3813s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    极品风水少爷
+                                </div>
+                                <div class="author h-c">
+                                    红桃八
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="4030" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/2/2363/2363s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    极品空间农场
+                                </div>
+                                <div class="author h-c">
+                                    虎口男
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tj-frame">
+            <div class="tj-frame-title h-l">
+                最近更新
+            </div>
+            <div class="tj-frame-content v-c">
+                <div class="tj-frame-l h-u">
+                    <div class="tj-frame-item h-c linkbook" novelid="6553" onclick="">
+                        <div class="tj-item v-c">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/6/6065/6065s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    盛世武神
+                                </div>
+                                <div class="author h-c">
+                                    猪兔同眠
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="6558" onclick="">
+                        <div class="tj-item v-c">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/6/6436/6436s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    主神崛起
+                                </div>
+                                <div class="author h-c">
+                                    文抄公
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="6244" onclick="">
+                        <div class="tj-item v-c">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/3/3753/3753s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    武动时空
+                                </div>
+                                <div class="author h-c">
+                                    骑着王八砍鲨鱼
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="6207" onclick="">
+                        <div class="tj-item v-c">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/4/4882/4882s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    进化的四十六亿重奏
+                                </div>
+                                <div class="author h-c">
+                                    相位行者
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tj-frame-l h-u">
+                    <div class="tj-frame-item h-c linkbook" novelid="6192" onclick="">
+                        <div class="tj-item v-c">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/5/5287/5287s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    末世危城
+                                </div>
+                                <div class="author h-c">
+                                    熊猫快跑
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="6137" onclick="">
+                        <div class="tj-item v-c">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/4/4470/4470s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    高魔地球
+                                </div>
+                                <div class="author h-c">
+                                    比那茗居团子
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="6086" onclick="">
+                        <div class="tj-item v-c">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/5/5707/5707s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    无限进阶
+                                </div>
+                                <div class="author h-c">
+                                    万象真藏
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj-frame-item h-c linkbook" novelid="6094" onclick="">
+                        <div class="tj-item v-c">
+                            <div class="cover">
+                                <img src="http://www.37zw.com/d/image/5/5819/5819s.jpg" alt="" />
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">
+                                    机战无限
+                                </div>
+                                <div class="author h-c">
+                                    亦醉
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <div id="recommendFrame" class="recommend-frame v-c">
+        {{
+        console.log(it.data);
+        var recommendData = it.data;
+        var recommendList = recommendData.recommend;
+        var boyList = recommendData.boy;
+        var girlList = recommendData.girl;
+        var updateList = recommendData.update;
+        }}
+        <div class="tj-frame">
+            <div class="tj-frame-title h-l">推荐</div>
+            <div class="tj-frame-content v-c">
+
+                {{~recommendList:item:index}}
+                {{?index%4==0}}
+                <div class="tj-frame-l h-u">
+                    {{?}}
+                    <div class="tj-frame-item h-c linkbook" novelId="{{=item.id}}" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com{{=item.cover}}" alt=""/>
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">{{=item.name}}</div>
+                                <div class="author h-c">{{=item.author}}</div>
+                            </div>
+                        </div>
+                    </div>
+                {{?index%4==3}}
+                </div>
+                {{?}}
+                {{~}}
+                {{?index%4!=3}}
+                </div>
+                {{?}}
+            </div>
+        </div>
+
+        <div class="tj-frame">
+            <div class="tj-frame-title h-l">男生</div>
+            <div class="tj-frame-content v-c">
+
+                {{~boyList:item:index}}
+                {{?index%4==0}}
+                <div class="tj-frame-l h-u">
+                    {{?}}
+                    <div class="tj-frame-item h-c linkbook" novelId="{{=item.id}}" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com{{=item.cover}}" alt=""/>
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">{{=item.name}}</div>
+                                <div class="author h-c">{{=item.author}}</div>
+                            </div>
+                        </div>
+                    </div>
+                {{?index%4==3}}
+                </div>
+                {{?}}
+                {{~}}
+                {{?index%4!=3}}
+                </div>
+                {{?}}
+            </div>
+        </div>
+
+
+        <div class="tj-frame">
+            <div class="tj-frame-title h-l">女生</div>
+            <div class="tj-frame-content v-c">
+
+                {{~girlList:item:index}}
+                {{?index%4==0}}
+                <div class="tj-frame-l h-u">
+                    {{?}}
+                    <div class="tj-frame-item h-c linkbook" novelId="{{=item.id}}" onclick="">
+                        <div class="tj-item v-c" onclick="">
+                            <div class="cover">
+                                <img src="http://www.37zw.com{{=item.cover}}" alt=""/>
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">{{=item.name}}</div>
+                                <div class="author h-c">{{=item.author}}</div>
+                            </div>
+                        </div>
+                    </div>
+                {{?index%4==3}}
+                </div>
+                {{?}}
+                {{~}}
+                {{?index%4!=3}}
+                </div>
+                {{?}}
+            </div>
+        </div>
+
+        <div class="tj-frame">
+            <div class="tj-frame-title h-l">最近更新</div>
+            <div class="tj-frame-content v-c">
+
+                {{~updateList:item:index}}
+                {{?index%4==0}}
+                <div class="tj-frame-l h-u">
+                    {{?}}
+                    <div class="tj-frame-item h-c linkbook" novelId="{{=item.id}}" onclick="">
+                        <div class="tj-item v-c" >
+                            <div class="cover">
+                                <img src="http://www.37zw.com{{=item.cover}}" alt=""/>
+                            </div>
+                            <div class="desc">
+                                <div class="name h-c">{{=item.name}}</div>
+                                <div class="author h-c">{{=item.author}}</div>
+                            </div>
+                        </div>
+                    </div>
+                {{?index%4==3}}
+                </div>
+                {{?}}
+                {{~}}
+                {{?index%4!=3}}
+                </div>
+                {{?}}
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
