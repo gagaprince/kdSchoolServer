@@ -8,7 +8,7 @@ var init = function(){
         pool = mysql.createPool({
             host: 'localhost',
             user: 'root',
-            password: 'root',
+            password: 'prince',
             database: 'blog',
             port: 3306
         });
