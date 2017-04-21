@@ -44,6 +44,23 @@ app.all(/^[^.]+\.(jsp|html)$/,function(req, res, next) {
     }
 });
 
+app.all(/^\/api\/[^.]+$/,function(req, res, next) {
+    var viewPath = req.path;
+    console.log(viewPath);
+    var ctrl = ctrls[viewPath];
+    if(ctrl){
+        ctrl(req,res,next,viewPath);
+    }else{
+        res.send({
+            data:{},
+            bstatus:{
+                code:5,
+                des:"找不到对应的接口"
+            }
+        })
+    }
+});
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

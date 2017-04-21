@@ -1,15 +1,72 @@
-<!DOCTYPE html>
 <html>
+
 <head lang="en">
-    <meta charset="UTF-8">
-    <title>{{=it.title}}</title>
+    <meta charset="UTF-8" />
+    <title>{{=it.title||""}}</title>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="content-security-policy" content="script-src 'self'" />
+    <link type="text/css" rel="stylesheet" href="/novel/css/list.css" />
+    <script src="/lib/zepto.min.js"></script>
+    <script src="/novel/js/util.js"></script>
+    <script src="/novel/js/list.js"></script>
 </head>
 <body>
-{{
-    var list = it.list;
-}}
-{{~list:item:index}}
-    <div targetid="{{=item.id}}">{{=item.name}}</div>
-{{~}}
+<div class="header h-c">
+    <div class="backFrame" onclick="">
+        <div class="back">
+            <div class="bg-frame"></div>
+            <div class="front-frame"></div>
+        </div>
+    </div>
+    <div class="title">
+        {{=it.title||""}}
+    </div>
+</div>
+<div class="container">
+    <div class="list" id="novelList">
+    {{ var novelList = it.list;}}
+    {{~novelList:item:index}}
+        <div class="item h-l-u novel-item" novelid="{{=item.id||''}}" link="http://www.37zw.com/0/613/" onclick="">
+            <div class="cover">
+                <img src="http://www.37zw.com{{=item.cover||''}}" alt="" />
+            </div>
+            <div class="desc-frame">
+                <div class="info h-l">
+                    <div class="name h-c">
+                        {{=item.name||""}}
+                    </div>
+                    <div class="author h-c">
+                        {{=item.author||""}}
+                    </div>
+                </div>
+                <div class="desc">
+                    {{
+                        var descripe = item.descripe||"";
+                        if(descripe.length>40){
+                            descripe = descripe.substring(0,40)+"...";
+                        }
+                    }}
+                    {{=descripe||""}}
+                </div>
+            </div>
+            <div class="arrow-frame">
+                <div class="arrow">
+                    <div class="bg-frame"></div>
+                    <div class="front-frame"></div>
+                </div>
+            </div>
+        </div>
+    {{~}}
+
+    </div>
+</div>
+<div class="loading-frame h-c" style="display: none;">
+    <div class="search-load h-c">
+        <div class="my-dot"></div>
+        <div class="my-dot"></div>
+        <div class="my-dot"></div>
+    </div>
+</div>
 </body>
 </html>
